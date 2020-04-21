@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledMovieInfoBar = styled.div`
-  display: flex;
-  align-items: center;
   width: 100%;
   min-height: 100px;
   height: auto;
@@ -13,6 +11,8 @@ export const StyledMovieInfoBar = styled.div`
   font-size: 20px;
 
   .movieinfobar-content {
+    display: flex;
+    justify-content: space-between;
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
@@ -20,7 +20,6 @@ export const StyledMovieInfoBar = styled.div`
   }
 
   .movieinfobar-content-col {
-    float: left;
     width: 33.33%;
     box-sizing: border-box;
     padding: 10px 20px 0 0;
@@ -28,17 +27,14 @@ export const StyledMovieInfoBar = styled.div`
 
   .movieinfobar-info {
     padding: 5px 0 0 10px;
-    float: left;
   }
 
   .fa-time,
   .fa-revenue {
-    float: left;
     margin-top: -4px;
   }
 
   .fa-budget {
-    float: left;
     margin-top: -3px;
   }
 

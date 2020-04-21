@@ -6,6 +6,7 @@ import TMDBLogo from '../images/tmdb_logo.svg';
 
 import {
   StyledHeader,
+  StyledLoginNav,
   StyledMovieBuffLogo,
   StyledTMDBLogo,
 } from '../styles/StyledHeader';
@@ -13,6 +14,7 @@ import {
 const Header = () => (
   <StyledHeader>
     <div className="header-content">
+      <StyledLoginNav>Login</StyledLoginNav>
       <Link to="/">
         <StyledMovieBuffLogo src={movieBuffLogo} alt="movie-buff-logo" />
       </Link>

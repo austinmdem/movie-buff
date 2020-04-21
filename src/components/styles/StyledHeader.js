@@ -6,6 +6,8 @@ export const StyledHeader = styled.div`
   box-sizing: border-box;
 
   .header-content {
+    display: flex;
+    justify-content: space-between;
     max-width: 1280px;
     min-height: 120px;
     padding: 20px 0px;
@@ -19,8 +21,16 @@ export const StyledHeader = styled.div`
   }
 `;
 
+export const StyledLoginNav = styled.div`
+  color: #fff;
+  margin-top: 35px;
+  font-family: 'Abel', sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+`;
+
 export const StyledMovieBuffLogo = styled.img`
-  width: 200px;
+  width: 220px;
   margin-top: 20px;
 
   @media screen and (max-width: 500px) {
@@ -32,7 +42,6 @@ export const StyledMovieBuffLogo = styled.img`
 export const StyledTMDBLogo = styled.img`
   width: 122px;
   margin-top: 25px;
-  float: right;
 
   @media screen and (max-width: 500px) {
     display: inline-block;
