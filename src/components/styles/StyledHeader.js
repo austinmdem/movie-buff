@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
-  background: #361967;
+  background: rgb(82, 45, 166);
+  background: linear-gradient(
+    90deg,
+    rgba(82, 45, 166, 1) 50%,
+    rgba(54, 25, 103, 1) 100%
+  );
   padding: 0 20px;
   box-sizing: border-box;
 
