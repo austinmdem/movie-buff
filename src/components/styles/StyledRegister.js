@@ -8,7 +8,7 @@ export const StyledRegister = styled.div`
   justify-content: center;
   background-size: cover;
   width: 100%;
-  height: 850px;
+  height: 100vh;
 
   .box h1 {
     font-family: 'Abel', sans-serif;
@@ -27,7 +27,8 @@ export const StyledRegister = styled.div`
     padding: 40px;
     position: absolute;
     top: 50%;
-    left: 50.5%;
+    left: 50%;
+    border-radius: 20px;
     transform: translate(-50%, -50%);
     background: #191919;
     text-align: center;

@@ -8,7 +8,13 @@ export const StyledLogin = styled.div`
   justify-content: center;
   background-size: cover;
   width: 100%;
-  height: 850px;
+  height: 100vh;
+
+  .container {
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
 
   .box h1 {
     font-family: 'Abel', sans-serif;
@@ -27,7 +33,8 @@ export const StyledLogin = styled.div`
     padding: 40px;
     position: absolute;
     top: 50%;
-    left: 50.5%;
+    left: 50%;
+    border-radius: 20px;
     transform: translate(-50%, -50%);
     background: #191919;
     text-align: center;
@@ -48,6 +55,9 @@ export const StyledLogin = styled.div`
     color: white;
     border-radius: 24px;
     transition: 0.25s;
+    font-family: 'lucida grande', 'sans-serif';
+    letter-spacing: 2px;
+    font-size: 16px;
   }
   .box input[type='email']:focus,
   .box input[type='password']:focus {
@@ -67,6 +77,9 @@ export const StyledLogin = styled.div`
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
+    font-family: 'lucida grande', 'sans-serif';
+    letter-spacing: 2px;
+    font-size: 16px;
   }
   .box input[type='submit']:hover {
     background: #cc2e43;

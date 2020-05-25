@@ -46,15 +46,25 @@ router.post(
 
     const { topthreemovies, favoritegenre } = req.body;
 
+    const profileFields = {
+      user: req.user.id,
+      favoritegenre,
+      topthreemovies: Array.isArray(topthreemovies)
+        ? topthreemovies
+        : topthreemovies
+            .split(',')
+            .map((topthreemovie) => ' • ' + topthreemovie.trim()),
+    };
+
     // Build profile object
-    const profileFields = {};
+    /* const profileFields = {};
     profileFields.user = req.user.id;
     if (favoritegenre) profileFields.favoritegenre = favoritegenre;
     if (topthreemovies) {
       profileFields.topthreemovies = topthreemovies
         .split(',')
         .map((topthreemovie) => topthreemovie.trim());
-    }
+    }*/
 
     try {
       let profile = await Profile.findOne({ user: req.user.id });
@@ -122,7 +132,7 @@ router.get('/user/:user_id', async (req, res) => {
 router.delete('/', auth, async (req, res) => {
   try {
     // Remove users posts
-
+    await Post.deleteMany({ user: req.user.id });
     // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     await User.findOneAndRemove({ _id: req.user.id });

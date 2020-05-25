@@ -2,12 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Login from '../Login';
+import Spinner from '../elements/Spinner';
 
-const PrivateRoute = ({ as: Component, ...props }) => {
-  if (!props.auth.isAuthenticated && !props.auth.loading) {
-    return <Login />;
-  } else {
+const PrivateRoute = ({
+  as: Component,
+  auth: { isAuthenticated, loading },
+  ...props
+}) => {
+  if (loading) {
+    return <Spinner />;
+  } else if (isAuthenticated && !loading) {
     return <Component {...props} />;
+  } else {
+    return <Login />;
   }
 };
 

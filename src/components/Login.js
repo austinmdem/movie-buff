@@ -30,32 +30,34 @@ const Login = ({ login, isAuthenticated }) => {
   return (
     <>
       <StyledLogin>
-        <form className="box" onSubmit={(e) => onSubmit(e)}>
-          <h1 className="large text-primary">Sign In</h1>
-          <p className="lead"></p>
-          <div className="form-group">
-            <input
-              type="email"
-              placeholder="Email Address"
-              name="email"
-              value={email}
-              onChange={(e) => onChange(e)}
-              required
-            />
+        <div className="container">
+          <form className="box" onSubmit={(e) => onSubmit(e)}>
+            <h1 className="large text-primary">Sign In</h1>
+            <p className="lead"></p>
+            <div className="form-group">
+              <input
+                type="email"
+                placeholder="Email Address"
+                name="email"
+                value={email}
+                onChange={(e) => onChange(e)}
+                required
+              />
 
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              value={password}
-              onChange={(e) => onChange(e)}
-            />
-          </div>
-          <input type="submit" className="btn btn-primary" value="Login" />
-          <p className="my-1">
-            Don't have an account? <a href="/register">Sign Up</a>
-          </p>
-        </form>
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                value={password}
+                onChange={(e) => onChange(e)}
+              />
+            </div>
+            <input type="submit" className="btn btn-primary" value="Login" />
+            <p className="my-1">
+              Don't have an account? <a href="/register">Sign Up</a>
+            </p>
+          </form>
+        </div>
       </StyledLogin>
     </>
   );

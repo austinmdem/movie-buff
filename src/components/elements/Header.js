@@ -3,6 +3,7 @@ import { Link } from '@reach/router';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
+import { FaUser } from 'react-icons/fa';
 
 import movieBuffLogo from '../images/movieBuffLogo.png';
 import TMDBLogo from '../images/tmdb_logo.svg';
@@ -18,6 +19,16 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
       <p>|</p>
       <Link to="/dashboard" style={{ textDecoration: 'none' }}>
         <p style={{ textDecoration: 'none' }}>Dashboard</p>
+      </Link>
+      <p>|</p>
+      <Link to="/profiles" style={{ textDecoration: 'none' }}>
+        <p style={{ textDecoration: 'none' }}>
+          <FaUser style={{ marginRight: '10px' }} /> Profiles
+        </p>
+      </Link>
+      <p>|</p>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <p style={{ textDecoration: 'none' }}>Browse Movies</p>
       </Link>
     </div>
   );
@@ -36,17 +47,17 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <StyledHeader>
-      <div className="login-signup">
-        {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
-      </div>
-
       <div className="logo-center">
         <Link to="/">
           <img src={movieBuffLogo} alt="movie-buff-logo" />
         </Link>
       </div>
 
-      <img src={TMDBLogo} alt="tmdb-logo" />
+      <div className="login-signup">
+        {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
+      </div>
+
+      <img src={TMDBLogo} alt="tmdb-logo" className="tmdb-logo" />
     </StyledHeader>
   );
 };
