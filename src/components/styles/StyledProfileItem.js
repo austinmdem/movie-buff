@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledProfileItem = styled.div`
+  .round-img {
+    border-radius: 50%;
+  }
   .btn {
     border: 0;
     background: none;

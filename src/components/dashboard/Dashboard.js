@@ -5,8 +5,10 @@ import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import Spinner from '../elements/Spinner';
 import DashboardActions from './DashboardActions';
+
 import StyledDashboard from '../styles/StyledDashboard';
 import { FaUser, FaUserMinus } from 'react-icons/fa';
+import { Animated } from 'react-animated-css';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -23,30 +25,36 @@ const Dashboard = ({
   ) : (
     <Fragment>
       <StyledDashboard>
-        <div className="box">
-          <h1 className="large text-primary">Dashboard</h1>
-          <p className="lead">
-            <FaUser /> Welcome {user && user.name}
-          </p>
-          {profile !== null ? (
-            <Fragment>
-              <DashboardActions />
-              <div>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => deleteAccount()}
-                >
-                  <FaUserMinus /> Delete Account
-                </button>
-              </div>
-            </Fragment>
-          ) : (
-            <Fragment>
-              <p>You have not yet created a profile, please add some info</p>
-              <Link to="/profile-form">Create Profile</Link>
-            </Fragment>
-          )}
-        </div>
+        <Animated
+          animationIn="fadeInUpBig"
+          animationOut="fadeout"
+          isVisible={true}
+        >
+          <div className="box">
+            <h1 className="large text-primary">Dashboard</h1>
+            <p className="lead">
+              <FaUser /> Welcome {user && user.name}
+            </p>
+            {profile !== null ? (
+              <Fragment>
+                <DashboardActions />
+                <div>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => deleteAccount()}
+                  >
+                    <FaUserMinus /> Delete Account
+                  </button>
+                </div>
+              </Fragment>
+            ) : (
+              <Fragment>
+                <p>You have not yet created a profile, please add some info</p>
+                <Link to="/profile-form">Create Profile</Link>
+              </Fragment>
+            )}
+          </div>
+        </Animated>
       </StyledDashboard>
     </Fragment>
   );

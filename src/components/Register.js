@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { Redirect } from '@reach/router';
 
 import StyledRegister from './styles/StyledRegister';
+import { Animated } from 'react-animated-css';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -36,56 +37,62 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   return (
     <>
       <StyledRegister>
-        <form className="box" onSubmit={(e) => onSubmit(e)}>
-          <h1 className="large text-primary">Sign Up</h1>
-          <p className="lead">
-            <i className="fas fa-user"></i> Create Your Account
-          </p>
-          <div className="form-group">
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              value={name}
-              onChange={(e) => onChange(e)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="email"
-              placeholder="Email Address"
-              name="email"
-              value={email}
-              onChange={(e) => onChange(e)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              value={password}
-              onChange={(e) => onChange(e)}
-              minLength="6"
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              name="password2"
-              value={password2}
-              onChange={(e) => onChange(e)}
-              minLength="6"
-            />
-          </div>
-          <input type="submit" className="btn btn-primary" value="Register" />
-          <p className="my-1">
-            Already have an account? <a href="/login">Sign In</a>
-          </p>
-        </form>
+        <Animated
+          animationIn="fadeInUpBig"
+          animationOut="fadeout"
+          isVisible={true}
+        >
+          <form className="box" onSubmit={(e) => onSubmit(e)}>
+            <h1 className="large text-primary">Sign Up</h1>
+            <p className="lead">
+              <i className="fas fa-user"></i> Create Your Account
+            </p>
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={name}
+                onChange={(e) => onChange(e)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                placeholder="Email Address"
+                name="email"
+                value={email}
+                onChange={(e) => onChange(e)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                value={password}
+                onChange={(e) => onChange(e)}
+                minLength="6"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                name="password2"
+                value={password2}
+                onChange={(e) => onChange(e)}
+                minLength="6"
+              />
+            </div>
+            <input type="submit" className="btn btn-primary" value="Register" />
+            <p className="my-1">
+              Already have an account? <a href="/login">Sign In</a>
+            </p>
+          </form>
+        </Animated>
       </StyledRegister>
     </>
   );

@@ -5,7 +5,12 @@ export const StyledHeader = styled.div`
     box-sizing: border-box;
   }
 
-  background: #361967;
+  background: rgb(61, 22, 149);
+  background: linear-gradient(
+    90deg,
+    rgba(61, 22, 149, 1) 0%,
+    rgba(41, 10, 97, 1) 100%
+  );
   display: flex;
   justify-content: space-around;
   padding: 15px;
@@ -32,6 +37,7 @@ export const StyledHeader = styled.div`
   .logo-center a img {
     margin: 0;
     width: 250px;
+    padding-top: 5px;
   }
 
   .tmdb-logo {

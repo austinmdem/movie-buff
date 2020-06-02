@@ -12,6 +12,7 @@ import NotFound from './NotFound';
 import Alert from './elements/Alert';
 import PrivateRoute from './routing/PrivateRoute';
 import Profiles from './profiles/Profiles';
+import Profile from './profile/Profile';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -42,6 +43,7 @@ const App = () => {
           <Profiles path="/profiles" component={Profiles} />
           <PrivateRoute as={Dashboard} path="/dashboard" />
           <PrivateRoute as={ProfileForm} path="/profile-form" />
+          <PrivateRoute as={Profile} path="/profile/:id" />
 
           <Movie path="/:movieId" />
           <NotFound default />
