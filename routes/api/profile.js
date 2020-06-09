@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../../middleware/auth');
+const checkObjectId = require('../../middleware/checkObjectId');
 const { check, validationResult } = require('express-validator');
 
 const Profile = require('../../models/Profile');
@@ -93,7 +94,7 @@ router.post(
 );
 
 // @route  GET api/profile
-// @desc   Create all profiles
+// @desc   Get all profiles
 // @access Public
 router.get('/', async (req, res) => {
   try {
@@ -105,26 +106,27 @@ router.get('/', async (req, res) => {
   }
 });
 
-// @route  GET api/profile/user/:user_id
-// @desc   Get profile by user ID
-// @access Public
-router.get('/user/:user_id', async (req, res) => {
-  try {
-    const profile = await Profile.findOne({
-      user: req.params.user_id,
-    }).populate('user', ['name']);
+// @route    GET api/profile/user/:user_id
+// @desc     Get profile by user ID
+// @access   Public
+router.get(
+  '/user/:user_id',
+  checkObjectId('user_id'),
+  async ({ params: { user_id } }, res) => {
+    try {
+      const profile = await Profile.findOne({
+        user: user_id,
+      }).populate('user', ['name']);
 
-    if (!profile) return res.status(400).json({ msg: 'Profile not found' });
+      if (!profile) return res.status(400).json({ msg: 'Profile not found' });
 
-    res.json(profile);
-  } catch (err) {
-    console.error(err.message);
-    if (err.kind == 'ObjectId') {
-      return res.status(400).json({ msg: 'Profile not found' });
+      return res.json(profile);
+    } catch (err) {
+      console.error(err.message);
+      return res.status(500).json({ msg: 'Server error' });
     }
-    res.status(500).send('Server Error');
   }
-});
+);
 
 // @route  DELETE api/profile
 // @desc   Delete profile, user & posts

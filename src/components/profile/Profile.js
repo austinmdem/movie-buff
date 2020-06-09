@@ -2,24 +2,30 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from '@reach/router';
-import { useMatch } from '@reach/router';
+
 import Spinner from '../elements/Spinner';
 import { getProfileById } from '../../actions/profile';
 
-const Profile = ({ getProfileById, profile: { profile }, auth }) => {
-  const match = useMatch('/profile/:id');
+const Profile = ({
+  getProfileById,
+  profile: { profile, loading },
+  auth,
+  id,
+}) => {
+  //
   useEffect(() => {
-    getProfileById(match.id);
-  }, [getProfileById, match.id]);
+    getProfileById(id);
+  }, [getProfileById, id]);
 
   return (
     <Fragment>
-      {profile !== null ? (
+      {profile === null || loading ? (
         <Spinner />
       ) : (
         <Fragment>
+          Profile
           <Link to="/profiles" className="btn btn-light">
-            Back To Profiles
+            Back to Profiles
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&

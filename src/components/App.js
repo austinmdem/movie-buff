@@ -43,7 +43,7 @@ const App = () => {
           <Profiles path="/profiles" component={Profiles} />
           <PrivateRoute as={Dashboard} path="/dashboard" />
           <PrivateRoute as={ProfileForm} path="/profile-form" />
-          <PrivateRoute as={Profile} path="/profile/:id" />
+          <Profile path="/profile/:id" component={Profile} />
 
           <Movie path="/:movieId" />
           <NotFound default />
