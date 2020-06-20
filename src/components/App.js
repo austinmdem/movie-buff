@@ -18,17 +18,14 @@ import Profile from './profile/Profile';
 import { Provider } from 'react-redux';
 import store from '../store';
 import { loadUser } from '../actions/auth';
-import setAuthToken from '../setAuthToken';
+import setAuthToken from '../utils/setAuthToken';
 
 import { GlobalStyle } from './styles/GlobalStyle';
 import './styles/alerts.css';
 
-if (localStorage.token) {
-  setAuthToken(localStorage.token);
-}
-
 const App = () => {
   useEffect(() => {
+    setAuthToken(localStorage.token);
     store.dispatch(loadUser());
   }, []);
   return (
