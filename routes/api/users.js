@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
+const fetch = require('node-fetch');
 const { check, validationResult } = require('express-validator');
 
 const User = require('../../models/User');
@@ -37,9 +38,24 @@ router.post(
           .json({ errors: [{ msg: 'User already exists' }] });
       }
 
+      const avatar = fetch('https://www.robohash.org/1', {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((response) => {
+          return response.txt();
+        })
+        .then((data) => {
+          console.log(JSON.parse(data)).this.setState(data);
+        });
+
       user = new User({
         name,
         email,
+        avatar,
         password,
       });
 
@@ -58,7 +74,7 @@ router.post(
       jwt.sign(
         payload,
         config.get('jwtSecret'),
-        { expiresIn: 36000 },
+        { expiresIn: '5 days' },
         (err, token) => {
           if (err) throw err;
           res.json({ token });

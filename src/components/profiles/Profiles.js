@@ -6,7 +6,7 @@ import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profile';
 
 import { FaConnectdevelop } from 'react-icons/fa';
-import StyledProfiles from '../styles/StyledProfiles';
+import { StyledProfiles } from '../styles/StyledProfiles';
 import { Animated } from 'react-animated-css';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {

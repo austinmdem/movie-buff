@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from '@reach/router';
 import PropTypes from 'prop-types';
 
-import StyledProfileItem from '../styles/StyledProfileItem';
-import Robohash from 'react-robohash';
+import { StyledProfileItem } from '../styles/StyledProfileItem';
 
 const ProfileItem = ({
   profile: {
@@ -15,7 +14,11 @@ const ProfileItem = ({
   return (
     <div>
       <StyledProfileItem>
-        <Robohash name={name} className="round-img" />
+        <img
+          src={`https://robohash.org/${name}`}
+          alt=""
+          className="round-img"
+        />
         <div>
           <h2>{name}</h2>
           <p>My Top 3: {topthreemovies}</p>

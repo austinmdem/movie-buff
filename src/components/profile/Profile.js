@@ -5,7 +5,8 @@ import { Link } from '@reach/router';
 import ProfileTop from './ProfileTop';
 import Spinner from '../elements/Spinner';
 import { getProfileById } from '../../actions/profile';
-import StyledProfile from '../styles/StyledProfile';
+
+import { StyledProfile } from '../styles/StyledProfile';
 
 const Profile = ({
   getProfileById,

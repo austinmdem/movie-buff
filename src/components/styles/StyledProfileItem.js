@@ -26,6 +26,18 @@ export const StyledProfileItem = styled.div`
   .btn:hover {
     background: #cc2e43;
   }
-`;
 
-export default StyledProfileItem;
+  .post .comment-count {
+    background: var(--light-color);
+    color: var(--primary-color);
+    padding: 0.1rem 0.2rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+
+  .post .post-date {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+`;

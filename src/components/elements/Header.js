@@ -33,6 +33,10 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
           </p>
         </Link>
         <p>|</p>
+        <Link to="/posts" style={{ textDecoration: 'none' }}>
+          <p style={{ textDecoration: 'none' }}>Posts</p>
+        </Link>
+        <p>|</p>
         <Link to="/" style={{ textDecoration: 'none' }}>
           <p style={{ textDecoration: 'none' }}>Browse Movies</p>
         </Link>

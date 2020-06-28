@@ -13,6 +13,8 @@ import Alert from './elements/Alert';
 import PrivateRoute from './routing/PrivateRoute';
 import Profiles from './profiles/Profiles';
 import Profile from './profile/Profile';
+import Posts from './posts/Posts';
+import Post from './post/Post';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -23,9 +25,11 @@ import setAuthToken from '../utils/setAuthToken';
 import { GlobalStyle } from './styles/GlobalStyle';
 import './styles/alerts.css';
 
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 const App = () => {
   useEffect(() => {
-    setAuthToken(localStorage.token);
     store.dispatch(loadUser());
   }, []);
   return (
@@ -41,6 +45,8 @@ const App = () => {
           <PrivateRoute as={Dashboard} path="/dashboard" />
           <PrivateRoute as={ProfileForm} path="/profile-form" />
           <Profile path="/profile/:id" component={Profile} />
+          <PrivateRoute as={Posts} path="/posts" />
+          <PrivateRoute as={Post} path="/posts/:id" />
 
           <Movie path="/:movieId" />
           <NotFound default />

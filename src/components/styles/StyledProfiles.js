@@ -3,17 +3,21 @@ import moviebg from '../images/moviebg.jpg';
 
 export const StyledProfiles = styled.div`
   background-image: url(${moviebg});
-  background-size: cover;
-
-  min-height: 100vh;
-  font-family: 'Abel', sans-serif;
+  justify-content: center;
+  background-size: 100% auto;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
   color: #fff;
-  letter-spacing: 2px;
 
   .container {
-    width: 100%;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    max-width: 1100px;
+    margin: auto;
+    overflow: visible;
+    padding: 0 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
   }
 
   .text-primary {
@@ -51,5 +55,3 @@ export const StyledProfiles = styled.div`
     margin-bottom: 1rem;
   }
 `;
-
-export default StyledProfiles;
