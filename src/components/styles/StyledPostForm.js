@@ -26,12 +26,15 @@ export const StyledPostForm = styled.div`
 
   .form textarea {
     display: block;
-    width: 100%;
+
+    width: 98%;
     padding: 0.4rem;
     font-size: 1.2rem;
     border: 1px solid #ccc;
     text-align: center;
-    border-radius: 10px;
+
+    resize: none;
+    text-align-last: center;
   }
 
   input[type='submit'] {

@@ -23,8 +23,10 @@ export const StyledDashboard = styled.div`
     margin-bottom: 1rem;
   }
 
-  .text-primary {
-    color: #17a2b8;
+  .large .text-primary {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #fff;
   }
 
   .lead {

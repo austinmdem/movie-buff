@@ -13,6 +13,7 @@ export const StyledProfileTop = styled.div`
   .bg-primary {
     background: #191919;
     color: #fff;
+    border-radius: 20px;
   }
 
   .p-2 {

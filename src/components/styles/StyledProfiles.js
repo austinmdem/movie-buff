@@ -5,23 +5,27 @@ export const StyledProfiles = styled.div`
   background-image: url(${moviebg});
   justify-content: center;
   background-size: 100% auto;
-  background-repeat: repeat;
+  background-repeat: repeat auto;
   width: 100%;
   height: 100vh;
-  overflow: scroll;
+  color: #fff;
+  overflow: auto;
+  padding-right: 15px;
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 2px;
   color: #fff;
 
   .container {
     max-width: 1100px;
     margin: auto;
-    overflow: visible;
     padding: 0 2rem;
     margin-top: 6rem;
     margin-bottom: 3rem;
   }
 
   .text-primary {
-    color: #17a2b8;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
   }
 
   .profiles {
@@ -36,6 +40,7 @@ export const StyledProfiles = styled.div`
     padding-top: 35px;
     padding-bottom: 35px;
     border-radius: 20px;
+    height: 100%;
     width: 50%;
     margin: 0 auto;
     display: block;

@@ -10,12 +10,15 @@ export const StyledPosts = styled.div`
   background-repeat: repeat;
   width: 100%;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
+  padding-right: 15px;
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 2px;
 
   body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
     height: 100%;
   }
   .large {
@@ -28,6 +31,8 @@ export const StyledPosts = styled.div`
   .box {
     background-color: #191919;
     padding: 20px;
+    margin-bottom: 3rem;
+    border-radius: 20px;
   }
 
   .lead {
@@ -38,13 +43,13 @@ export const StyledPosts = styled.div`
   }
 
   .text-primary {
-    color: #17a2b8;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
   }
 
   .container {
     max-width: 1100px;
     margin: auto;
-    overflow: visible;
     padding: 0 2rem;
     margin-top: 6rem;
     margin-bottom: 3rem;

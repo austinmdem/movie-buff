@@ -16,6 +16,11 @@ export const StyledLogin = styled.div`
     padding-bottom: 150px;
   }
 
+  .box .text-primary {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+  }
+
   .box h1 {
     font-family: 'Abel', sans-serif;
     color: #fff;

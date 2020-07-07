@@ -35,6 +35,8 @@ const PostForm = ({ addPost }) => {
   );
 };
 
-PostForm.propTypes = {};
+PostForm.propTypes = {
+  addpost: PropTypes.func.isRequired,
+};
 
 export default connect(null, { addPost })(PostForm);
