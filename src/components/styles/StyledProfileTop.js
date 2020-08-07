@@ -34,5 +34,3 @@ export const StyledProfileTop = styled.div`
     font-size: 1rem;
   }
 `;
-
-export default StyledProfileTop;

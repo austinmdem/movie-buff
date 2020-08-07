@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
 
-import StyledProfileForm from '../styles/StyledProfileForm';
+import { StyledProfileForm } from '../styles/StyledProfileForm';
 import { Animated } from 'react-animated-css';
 
 const initialState = {

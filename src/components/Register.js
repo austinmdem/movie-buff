@@ -5,7 +5,8 @@ import { register } from '../actions/auth';
 import PropTypes from 'prop-types';
 import { Redirect } from '@reach/router';
 
-import StyledRegister from './styles/StyledRegister';
+import { StyledRegister } from './styles/StyledRegister';
+import { FaUser } from 'react-icons/fa';
 import { Animated } from 'react-animated-css';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
@@ -45,7 +46,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           <form className="box" onSubmit={(e) => onSubmit(e)}>
             <h1 className="large text-primary">Sign Up</h1>
             <p className="lead">
-              <i className="fas fa-user"></i> Create Your Account
+              <FaUser /> Create Your Account
             </p>
             <div className="form-group">
               <input
@@ -89,7 +90,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             </div>
             <input type="submit" className="btn btn-primary" value="Register" />
             <p className="my-1">
-              Already have an account? <a href="/login">Sign In</a>
+              Already have an account?{' '}
+              <a href="/login" style={{ textDecoration: 'none' }}>
+                Sign In
+              </a>
             </p>
           </form>
         </Animated>

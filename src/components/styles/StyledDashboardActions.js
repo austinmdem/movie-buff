@@ -17,7 +17,7 @@ export const StyledDashboardActions = styled.div`
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-    font-family: 'lucida grande', 'sans-serif';
+    font-family: 'Abel', sans-serif;
   }
   .btn:hover {
     background: #cc2e43;
@@ -27,4 +27,3 @@ export const StyledDashboardActions = styled.div`
     text-decoration: none;
   }
 `;
-export default StyledDashboardActions;

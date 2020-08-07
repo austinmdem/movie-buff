@@ -19,7 +19,7 @@ export const StyledProfileItem = styled.div`
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-    font-family: 'lucida grande', 'sans-serif';
+    font-family: 'Abel', sans-serif;
     text-decoration: none;
   }
 
@@ -39,5 +39,35 @@ export const StyledProfileItem = styled.div`
     color: #aaa;
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media screen and (max-width: 1350px) {
+  }
+
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 700px) {
+    .round-img {
+      height: 100px;
+      width: auto;
+    }
+
+    .btn {
+      width: 40px;
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .round-img {
+      height: 100px;
+      width: auto;
+    }
+
+    .btn {
+      width: 40px;
+      font-size: 12px;
+    }
   }
 `;

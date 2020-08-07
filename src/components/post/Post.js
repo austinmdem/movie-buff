@@ -22,7 +22,11 @@ const Post = ({ getPost, post: { post, loading }, id }) => {
       <Fragment>
         <div className="container">
           <div className="box">
-            <Link to="/posts" className="btn">
+            <Link
+              to="/posts"
+              className="btn-back"
+              style={{ textDecoration: 'none' }}
+            >
               Back To Posts
             </Link>
             <PostItem post={post} showActions={false} />

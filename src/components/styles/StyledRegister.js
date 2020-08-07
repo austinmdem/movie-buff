@@ -16,6 +16,10 @@ export const StyledRegister = styled.div`
     letter-spacing: 2px;
   }
 
+  a {
+    color: #fff;
+  }
+
   .box p {
     font-family: 'Abel', sans-serif;
     color: #fff;
@@ -75,5 +79,3 @@ export const StyledRegister = styled.div`
     background: #cc2e43;
   }
 `;
-
-export default StyledRegister;

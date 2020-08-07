@@ -16,8 +16,12 @@ export const StyledLogin = styled.div`
     padding-bottom: 150px;
   }
 
+  a {
+    color: #fff;
+  }
+
   .box .text-primary {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing: 2px;
   }
 
@@ -60,7 +64,7 @@ export const StyledLogin = styled.div`
     color: white;
     border-radius: 24px;
     transition: 0.25s;
-    font-family: 'lucida grande', 'sans-serif';
+    font-family: 'Abel', sans-serif;
     letter-spacing: 2px;
     font-size: 16px;
   }
@@ -82,7 +86,7 @@ export const StyledLogin = styled.div`
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-    font-family: 'lucida grande', 'sans-serif';
+    font-family: 'Abel', sans-serif;
     letter-spacing: 2px;
     font-size: 16px;
   }
@@ -90,5 +94,3 @@ export const StyledLogin = styled.div`
     background: #cc2e43;
   }
 `;
-
-export default StyledLogin;

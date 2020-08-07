@@ -9,6 +9,4 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     
   }
-
-
 `;

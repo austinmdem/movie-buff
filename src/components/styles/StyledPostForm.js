@@ -50,7 +50,7 @@ export const StyledPostForm = styled.div`
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-    font-family: 'lucida grande', 'sans-serif';
+    font-family: 'Abel', sans-serif;
     letter-spacing: 2px;
     font-size: 16px;
   }

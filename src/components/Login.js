@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../actions/auth';
 
-import StyledLogin from './styles/StyledLogin';
+import { StyledLogin } from './styles/StyledLogin';
 import { Animated } from 'react-animated-css';
 
 const Login = ({ login, isAuthenticated }) => {
@@ -60,7 +60,10 @@ const Login = ({ login, isAuthenticated }) => {
               </div>
               <input type="submit" className="btn btn-primary" value="Login" />
               <p className="my-1">
-                Don't have an account? <a href="/register">Sign Up</a>
+                Don't have an account?{' '}
+                <a href="/register" style={{ textDecoration: 'none' }}>
+                  Sign Up
+                </a>
               </p>
             </form>
           </div>

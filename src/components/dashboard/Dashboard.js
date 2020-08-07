@@ -6,7 +6,7 @@ import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import Spinner from '../elements/Spinner';
 import DashboardActions from './DashboardActions';
 
-import StyledDashboard from '../styles/StyledDashboard';
+import { StyledDashboard } from '../styles/StyledDashboard';
 import { FaUser, FaUserMinus } from 'react-icons/fa';
 import { Animated } from 'react-animated-css';
 

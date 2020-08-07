@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import StyledProfileTop from '../styles/StyledProfileTop';
+import { StyledProfileTop } from '../styles/StyledProfileTop';
 
 const ProfileTop = ({
   profile: {

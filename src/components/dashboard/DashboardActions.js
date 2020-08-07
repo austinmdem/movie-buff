@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@reach/router';
-import StyledDashboardActions from '../styles/StyledDashboardActions';
+import { StyledDashboardActions } from '../styles/StyledDashboardActions';
 
 const DashboardActions = () => {
   return (

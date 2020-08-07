@@ -17,15 +17,9 @@ export const StyledDashboard = styled.div`
     min-height: 100%;
     width: 100%;
   }
-  .large {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
 
   .large .text-primary {
     font-family: Arial, Helvetica, sans-serif;
-
     color: #fff;
   }
 
@@ -63,12 +57,23 @@ export const StyledDashboard = styled.div`
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-    font-family: 'lucida grande', 'sans-serif';
+    font-family: 'Abel', sans-serif;
     letter-spacing: 2px;
     font-size: 16px;
   }
   button:hover {
     background: #cc2e43;
   }
+
+  @media screen and (max-width: 1350px) {
+  }
+
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 600px) {
+  }
+
+  @media screen and (max-width: 375px) {
+  }
 `;
-export default StyledDashboard;

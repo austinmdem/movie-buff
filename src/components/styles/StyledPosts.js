@@ -43,7 +43,7 @@ export const StyledPosts = styled.div`
   }
 
   .text-primary {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     color: #fff;
   }
 

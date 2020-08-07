@@ -3,12 +3,14 @@ import moviebg from '../images/moviebg.jpg';
 
 export const StyledProfileForm = styled.div`
   background-image: url(${moviebg});
+  background-repeat: repeat auto;
   display: flex;
   position: relative;
   justify-content: center;
   background-size: cover;
   width: 100%;
   height: 100vh;
+  overflow: auto;
   font-family: 'abel', 'sans-serif';
   letter-spacing: 2px;
   color: #fff;
@@ -71,7 +73,7 @@ export const StyledProfileForm = styled.div`
     background: none;
     display: block;
     margin: 20px auto;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Abel', sans-serif;
     text-align: center;
     border: 2px solid #cc2e43;
     padding: 14px 10px;
@@ -95,7 +97,7 @@ export const StyledProfileForm = styled.div`
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-    font-family: 'lucida grande', sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing: 2px;
     font-size: 16px;
   }
@@ -119,7 +121,7 @@ export const StyledProfileForm = styled.div`
     transition: 0.25s;
     cursor: pointer;
     text-decoration: none;
-    font-family: 'lucida grande', sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing: 2px;
     font-size: 16px;
   }
@@ -133,7 +135,7 @@ export const StyledProfileForm = styled.div`
     display: block;
     margin: 20px auto;
     width: 100%;
-    font-family: 'Raleway', sans-serif;
+
     text-align: center;
     border: 2px solid #cc2e43;
     padding: 14px 10px;
@@ -142,7 +144,7 @@ export const StyledProfileForm = styled.div`
     color: white;
     border-radius: 24px;
     transition: 0.25s;
-    font-family: 'lucida grande', 'sans-serif';
+    font-family: 'Abel', sans-serif;
     letter-spacing: 2px;
     font-size: 16px;
   }
@@ -151,6 +153,26 @@ export const StyledProfileForm = styled.div`
     width: 280px;
     border-color: #361967;
   }
-`;
 
-export default StyledProfileForm;
+  @media screen and (max-width: 1350px) {
+  }
+
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 600px) {
+    .box {
+      width: 250px;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .box {
+      width: 250px;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+  }
+`;

@@ -26,18 +26,20 @@ const Profile = ({
       ) : (
         <StyledProfile>
           <Fragment>
-            <div className="profile-nav">
-              <Link to="/profiles" className="btn">
-                Back to Profiles
-              </Link>
-              {auth.isAuthenticated &&
-                auth.loading === false &&
-                auth.user._id === profile.user._id && (
-                  <Link to="/profile-form" className="btn">
-                    Edit Profile
-                  </Link>
-                )}
-              <ProfileTop profile={profile} />
+            <div className="bg-primary">
+              <div className="profile-nav">
+                <ProfileTop profile={profile} />
+                <Link to="/profiles" className="btn">
+                  Back to Profiles
+                </Link>
+                {auth.isAuthenticated &&
+                  auth.loading === false &&
+                  auth.user._id === profile.user._id && (
+                    <Link to="/profile-form" className="btn">
+                      Edit Profile
+                    </Link>
+                  )}
+              </div>
             </div>
           </Fragment>
         </StyledProfile>

@@ -4,12 +4,16 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 import { FaUser } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 
 import movieBuffLogo1 from '../images/movieBuffLogo1.png';
 import TMDBLogo from '../images/tmdb_logo.svg';
 import { Animated } from 'react-animated-css';
 
+import ResponsiveMenu from 'react-responsive-navbar';
 import { StyledHeader } from '../styles/StyledHeader';
+import { StyledNavLinks } from '../styles/StyledNavLinks';
 
 const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
@@ -18,29 +22,40 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
       animationOut="fadeout"
       isVisible={true}
     >
-      <div className="navigation-links">
-        <a onClick={logout} href="#!" style={{ textDecoration: 'none' }}>
-          <p>Logout</p>
-        </a>
-        <p>|</p>
-        <Link to="/dashboard" style={{ textDecoration: 'none' }}>
-          <p style={{ textDecoration: 'none' }}>Dashboard</p>
-        </Link>
-        <p>|</p>
-        <Link to="/profiles" style={{ textDecoration: 'none' }}>
-          <p style={{ textDecoration: 'none' }}>
-            <FaUser style={{ marginRight: '10px' }} /> Profiles
-          </p>
-        </Link>
-        <p>|</p>
-        <Link to="/posts" style={{ textDecoration: 'none' }}>
-          <p style={{ textDecoration: 'none' }}>Posts</p>
-        </Link>
-        <p>|</p>
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <p style={{ textDecoration: 'none' }}>Browse Movies</p>
-        </Link>
-      </div>
+      <ResponsiveMenu
+        menuOpenButton={<FaBars />}
+        menuCloseButton={<FaTimes />}
+        changeMenuOn="768px"
+        largeMenuClassName="large-menu-classname"
+        smallMenuClassName="small-menu-classname"
+        menu={
+          <StyledNavLinks>
+            <div className="navigation-links" data-test="navlinks">
+              <a onClick={logout} href="#!" style={{ textDecoration: 'none' }}>
+                <p>Logout</p>
+              </a>
+
+              <Link to="/dashboard" style={{ textDecoration: 'none' }}>
+                <p style={{ textDecoration: 'none' }}>Dashboard</p>
+              </Link>
+
+              <Link to="/profiles" style={{ textDecoration: 'none' }}>
+                <p style={{ textDecoration: 'none' }}>
+                  <FaUser style={{ marginRight: '10px' }} /> Profiles
+                </p>
+              </Link>
+
+              <Link to="/posts" style={{ textDecoration: 'none' }}>
+                <p style={{ textDecoration: 'none' }}>Posts</p>
+              </Link>
+
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <p style={{ textDecoration: 'none' }}>Browse Movies</p>
+              </Link>
+            </div>
+          </StyledNavLinks>
+        }
+      />
     </Animated>
   );
 
@@ -50,15 +65,17 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
       animationOut="fadeout"
       isVisible={true}
     >
-      <div className="navigation-links">
-        <Link to="/login" style={{ textDecoration: 'none' }}>
-          <p>Login</p>
-        </Link>
-        <p>|</p>
-        <Link to="/register" style={{ textDecoration: 'none' }}>
-          <p>Register</p>
-        </Link>
-      </div>
+      <StyledNavLinks>
+        <div className="login-panel">
+          <Link to="/login" style={{ textDecoration: 'none' }}>
+            <p>Login</p>
+          </Link>
+
+          <Link to="/register" style={{ textDecoration: 'none' }}>
+            <p>Register</p>
+          </Link>
+        </div>
+      </StyledNavLinks>
     </Animated>
   );
 
@@ -87,5 +104,7 @@ Header.propTypes = {
 const mapStateToProps = (state) => ({
   auth: state.auth,
 });
+
+export { Header };
 
 export default connect(mapStateToProps, { logout })(Header);

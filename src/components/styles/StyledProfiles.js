@@ -18,13 +18,12 @@ export const StyledProfiles = styled.div`
   .container {
     max-width: 1100px;
     margin: auto;
-    padding: 0 2rem;
     margin-top: 6rem;
     margin-bottom: 3rem;
   }
 
   .text-primary {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     color: #fff;
   }
 
@@ -58,5 +57,23 @@ export const StyledProfiles = styled.div`
   .lead {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 1350px) {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 600px) {
+  }
+
+  @media screen and (max-width: 375px) {
+    .large .lead {
+      font-size: 2px;
+    }
   }
 `;

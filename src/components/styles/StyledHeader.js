@@ -44,4 +44,27 @@ export const StyledHeader = styled.div`
     width: 170px;
     margin-right: 38px !important;
   }
+
+  .small-menu-classname {
+    padding-top: 0.4em;
+    margin-right: 3em;
+    color: #fff;
+    font-size: 3em;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .tmdb-logo {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 600px) {
+  }
+
+  @media screen and (max-width: 375px) {
+  }
 `;

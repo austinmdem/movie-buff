@@ -17,6 +17,14 @@ export const StyledProfile = styled.div`
     display: block;
   }
 
+  .bg-primary {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #191919;
+    color: #fff;
+    border-radius: 20px;
+  }
+
   .btn {
     border: 0;
     background: #191919;
@@ -31,7 +39,7 @@ export const StyledProfile = styled.div`
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-    font-family: 'lucida grande', 'sans-serif';
+    font-family: 'Abel', sans-serif;
   }
   .btn:hover {
     background: #cc2e43;
@@ -41,4 +49,3 @@ export const StyledProfile = styled.div`
     text-decoration: none;
   }
 `;
-export default StyledProfile;
