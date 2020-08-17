@@ -17,6 +17,7 @@
     "axios": "^0.19.2",
     "axios-mock-adapter": "^1.18.2",
     "bcryptjs": "^2.4.3",
+    "beauty-stars": "^1.1.0",
     "config": "^3.3.1",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
@@ -35,6 +36,7 @@
     "react-responsive-navbar": "^1.0.11",
     "react-robohash": "^1.0.9",
     "react-scripts": "3.4.1",
+    "react-star-rating-controlled-component": "^1.0.1",
     "react-test-renderer": "^16.13.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
@@ -51,7 +53,8 @@
     "server": "nodemon server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "eject": "react-scripts eject",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "eslintConfig": {
     "extends": "react-app"

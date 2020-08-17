@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Reducer Should handle CLEAR_PROFILE 1`] = `
+Object {
+  "error": Object {},
+  "loading": true,
+  "profile": null,
+  "profiles": Array [],
+}
+`;
+
+exports[`Profile Reducer Should handle GET_PROFILE 1`] = `
+Object {
+  "error": Object {},
+  "loading": false,
+  "profile": undefined,
+  "profiles": Array [],
+}
+`;
+
+exports[`Profile Reducer Should handle GET_PROFILES 1`] = `
+Object {
+  "error": Object {},
+  "loading": false,
+  "profile": null,
+  "profiles": undefined,
+}
+`;
+
+exports[`Profile Reducer Should handle PROFILE_ERROR 1`] = `
+Object {
+  "error": undefined,
+  "loading": false,
+  "profile": null,
+  "profiles": Array [],
+}
+`;

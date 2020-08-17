@@ -40,6 +40,14 @@ const PostSchema = new Schema({
       },
     },
   ],
+  ratings: [
+    {
+      user: {
+        type: Number,
+        ref: 'users',
+      },
+    },
+  ],
   date: {
     type: Date,
     default: Date.now,
