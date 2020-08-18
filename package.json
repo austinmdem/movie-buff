@@ -49,12 +49,11 @@
   "main": "server.js",
   "scripts": {
     "client": "react-scripts start --prefix client",
-    "build": "react-scripts build",
+    "build": "react-scripts build --prefix src",
     "server": "nodemon server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "eject": "react-scripts eject",
-    "test": "react-scripts test",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
