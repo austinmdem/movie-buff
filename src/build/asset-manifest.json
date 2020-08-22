@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c56a06a0.chunk.css",
+    "main.js": "/static/js/main.b790413c.chunk.js",
+    "main.js.map": "/static/js/main.b790413c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c20aae40.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c20aae40.js.map",
+    "static/js/2.50923e6e.chunk.js": "/static/js/2.50923e6e.chunk.js",
+    "static/js/2.50923e6e.chunk.js.map": "/static/js/2.50923e6e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6913cba49110747d8ed1b62404ac8d4a.js": "/precache-manifest.6913cba49110747d8ed1b62404ac8d4a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c56a06a0.chunk.css.map": "/static/css/main.c56a06a0.chunk.css.map",
+    "static/js/2.50923e6e.chunk.js.LICENSE.txt": "/static/js/2.50923e6e.chunk.js.LICENSE.txt",
+    "static/media/moviebg.jpg": "/static/media/moviebg.667f060f.jpg",
+    "static/media/no_image.jpg": "/static/media/no_image.31f5bb1d.jpg",
+    "static/media/tmdb_logo.svg": "/static/media/tmdb_logo.30cd724b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c20aae40.js",
+    "static/js/2.50923e6e.chunk.js",
+    "static/css/main.c56a06a0.chunk.css",
+    "static/js/main.b790413c.chunk.js"
+  ]
+}

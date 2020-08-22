@@ -49,8 +49,11 @@
   "main": "server.js",
   "scripts": {
     "client": "react-scripts start --prefix client",
-    "build": "react-scripts build --prefix src",
+    "build": "cd src && npm run build",
+    "install-client": "cd src && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "server": "nodemon server",
+    "start": "node server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "eject": "react-scripts eject",
     "test": "react-scripts test"
