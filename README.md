@@ -1,78 +1,81 @@
-# Product Name
-> A simple MERN app that lets you search movies ratings and share with friends.
+# Movie Bugg
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
-One to two paragraph statement about your product and what it does.
+MERN application to browse your favorite Movies, TV shows, and share ratings with friends.
 
 ![](moviebuff.png)
 
-## Installation
+[Movie Buff](http://movie-buff-mern.herokuapp.com)
 
-OS X & Linux:
+## Getting Started
 
-```sh
-npm install my-crazy-module --save
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+- npm
+
+```
+npm install npm@latest -g
 ```
 
-Windows:
+### Installing
 
-```sh
-edit autoexec.bat
+1. Clone the repo
+
+```
+git clone https://github.com/AlanBayWalker/film-cloud.git
 ```
 
-## Usage example
+2. Run npm install inside project root directory
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
+```
+npm install
 ```
 
-## Release History
+3. Start the server
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+```
+npm run start
+```
 
-## Meta
+4. Explore
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+```
+Enjoy! :)
+```
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+## Built With
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+* [React](https://reactjs.org/) - The JavaScript framework used
+* [Redux](https://redux.js.org/) - State Management
+* [SASS](https://sass-lang.com/) - CSS Pre-Processor
+* [Esri](https://www.themoviedb.org/) - Layer rendering API
 
-## Contributing
+## Contributors
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+* **Alan Ayala** - *Initial work* - [ABW Technologies](http://www.abwtechnologies.com/)
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* [WOW.js](https://mynameismatthieu.com/WOW/) - TScrolling animation
+* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll) - Scroll on link click animation
+* [Blizzard](https://www.blizzard.com) - Loader animation
+
+
+Viewport
+Window
+×
+×
+×
+Viewport
+Window
+×
+×
+×
