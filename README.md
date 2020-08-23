@@ -75,14 +75,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * [VS Code](https://code.visualstudio.com/) - Text Editor
 * Inspiration
 
-
-Viewport
-Window
-×
-×
-×
-Viewport
-Window
-×
-×
-×
